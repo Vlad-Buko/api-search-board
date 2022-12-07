@@ -5,7 +5,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class ApiSearchBoardApplication {
-
     public static void main(String[] args) {
         SpringApplication.run(ApiSearchBoardApplication.class, args);
     }
