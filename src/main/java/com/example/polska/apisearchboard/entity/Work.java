@@ -6,6 +6,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 /**
  * Created by Vladislav Domaniewski
  */
@@ -30,6 +32,9 @@ public class Work {
     private String contract;
 
     private String location;
+
+    @ManyToMany(mappedBy = "name")
+    private List<NameCompany> nameCompanies;
 
 //    private List<Object> languages;
 //

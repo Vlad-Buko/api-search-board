@@ -10,9 +10,11 @@ databaseChangeLog:
                   name: id
                   type: bigint
                   autoIncrement: true
+                  defaultValueConstraintName: work_pk
                   constraints:
-                    primaryKey: true
                     nullable: false
+                    primaryKey: true
+                    unique: true
               - column:
                   name: name_company
                   type: varchar(255)

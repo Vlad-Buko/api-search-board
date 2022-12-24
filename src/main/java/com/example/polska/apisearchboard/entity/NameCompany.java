@@ -6,6 +6,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 /**
  * Created by Vladislav Domaniewski
  */
@@ -21,5 +23,10 @@ public class NameCompany {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String name;
+
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(name = "name_company_work",
+            joinColumns = @JoinColumn(name = "name_company_id"),
+            inverseJoinColumns = @JoinColumn(name = "work_id"))
+    private List<Work> name;
 }

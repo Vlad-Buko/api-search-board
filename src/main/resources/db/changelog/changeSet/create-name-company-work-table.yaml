@@ -1,0 +1,20 @@
+databaseChangeLog:
+  - changeSet:
+      id: create_table_name_company
+      author: Vladislav_Domaniewski
+      changes:
+        - createTable:
+            tableName: name_company_work
+            columns:
+              - column:
+                  name: work_id
+                  type: bigint
+                  constraints:
+                    foreignKeyName: work_id_fk
+                    references: work (id)
+              - column:
+                  name: name_company_id
+                  type: bigint
+                  constraints:
+                    foreignKeyName: name_company_id_fk
+                    references: name_company (id)
