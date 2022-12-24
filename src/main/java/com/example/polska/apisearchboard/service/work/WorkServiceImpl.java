@@ -1,4 +1,4 @@
-package com.example.polska.apisearchboard.service;
+package com.example.polska.apisearchboard.service.work;
 
 import com.example.polska.apisearchboard.entity.Work;
 import com.example.polska.apisearchboard.model.WorkModel;

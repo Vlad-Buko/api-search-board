@@ -1,7 +1,6 @@
-package com.example.polska.apisearchboard.service;
+package com.example.polska.apisearchboard.service.work;
 
 import com.example.polska.apisearchboard.model.WorkModel;
-import org.springframework.stereotype.Service;
 
 /**
  * Created by Vladislav Domaniewski
