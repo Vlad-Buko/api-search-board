@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.example.polska</groupId>
     <artifactId>api-search-board</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>v0.1.test</version>
     <name>api-search-board</name>
     <description>api-search-board</description>
     <properties>
