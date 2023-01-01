@@ -6,6 +6,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 /**
@@ -27,16 +28,26 @@ public class Work {
     @Column(name = "name_company")
     private String nameCompany;
 
-    private String position;
+    private String logo;
 
-    private String contract;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "work")
+    private List<Position> position;
 
-    private String location;
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "workContract")
+    private Contract contract;
 
-    @ManyToMany(mappedBy = "name")
-    private List<NameCompany> nameCompanies;
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "workLocation")
+    private Location location;
 
-//    private List<Object> languages;
-//
-//    private List<Object> tools;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "language")
+    private List<Language> languages;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "tool")
+    private List<Tools> tools;
+
+    private LocalDateTime postAt;
+
+    private LocalDateTime putAt;
 }
