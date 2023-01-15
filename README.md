@@ -9,7 +9,7 @@ Tech stack:
 4. Project Lombok
 5. Swagger 3.0.3
 6. Liquibase 
-7. Apache Tomcat (embedded)
+
 
 ## This is a backend created for such a web application.
 Front-End created by Max (LaZy1220) Her github here, link https://github.com/LaZy1220
